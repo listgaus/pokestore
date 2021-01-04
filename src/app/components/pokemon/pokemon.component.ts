@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Pokemon } from '../../models/pokemon';
-import { LoggerService } from '../../services/logger.service';
 import { PokeshopStore } from '../../services/app.store';
 import { DialogService } from '../../services/dialog.service';
 
