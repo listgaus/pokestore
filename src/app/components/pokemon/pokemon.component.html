@@ -1,0 +1,12 @@
+<mat-list-item role="listitem" class="pokemon-card-item">
+  <div class="pokemon-avatar" #pokeImg>
+    <img src={{pokemon.url}}>
+  </div>
+  <mat-card-title class="pokemon-name-title">{{pokemon.name | titlecase}}</mat-card-title>
+  <button *ngIf="pokemon.isInCart != true" mat-mini-fab class="cart-action-btn">
+    <mat-icon class="action-btn-icon" (click)="addToCart()"> + </mat-icon>
+  </button>
+  <button *ngIf="inCart" mat-mini-fab class="cart-action-btn">
+    <mat-icon class="action-btn-icon remove" (click)="removeFromCart()"> - </mat-icon>
+  </button>
+</mat-list-item>

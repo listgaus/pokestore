@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables.scss';
+
+:host ::ng-deep .mat-list-item-content {
+  padding: 0 !important;
+  .mat-card-title{
+    font-size: 1.8vw;
+  }
+  font-size: 1vw;
+  @media only screen and (max-width :  $desktop){
+    font-size: 1.2vw;
+    .cart-count{
+          width: 12px;
+          height: 12px;
+          top: 8px;
+          left: 20px;
+          line-height: 14px;
+          font-size: 10px;
+        }
+  }
+  @media only screen and (max-width :  $tablet){
+    font-size: 1.8vw;
+    .cart-count{
+      left: 24px;
+    }
+  }
+  @media only screen and (max-width :  $mobile-large){
+    font-size: 2vw;
+    .cart-count{
+      left: 20px;
+    }
+  }
+
+}
+
+.app-surface {
+  padding: 1rem;
+}
+

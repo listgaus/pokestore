@@ -1,0 +1,19 @@
+<mat-nav-list class="header__container">
+  <mat-list-item class="header__item" [routerLink]="'/'">Home</mat-list-item>
+  <mat-list-item class="header__item cart" [routerLink]="'/cart'">
+    <div class="cart-div"> Cart <span class="cart-count">{{cartCount$ | async}}</span></div>
+  </mat-list-item>
+  <mat-list-item
+    class="header__item login"
+    *ngIf="isLoggedIn | async; else loginView"
+    (click)="logout()"
+  >Logout
+  </mat-list-item>
+  <ng-template #loginView>
+    <mat-list-item
+      class="header__item login"
+      (click)="login()"
+    >Login
+    </mat-list-item>
+  </ng-template>
+</mat-nav-list>

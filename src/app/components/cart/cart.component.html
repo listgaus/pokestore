@@ -1,0 +1,8 @@
+<p *ngIf="pokemons.length > 0" class="cart-list__title">Pokemons caught ({{pokemons?.length}}):</p>
+<p *ngIf="pokemons.length == 0" class="cart-list__title">No pokemons yet, go catch some!</p>
+<mat-list role="list" class="cart-list__container">
+  <pokemon-card *ngFor="let pokemon of pokemons" role="listitem" [inCart]="true" [pokemon]="pokemon"></pokemon-card>
+</mat-list>
+<button *ngIf="pokemons.length > 1" mat-raised-button class="clear-btn" (click)="clearCart()">
+  Clear
+</button>

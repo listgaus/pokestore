@@ -1,0 +1,18 @@
+<div class="pokemon-container" *ngIf="pokemons$ | async as pokemonList">
+  <p class="pokemon-list__title">
+    Pokemons list ({{ pokemonList.length }}):
+  </p>
+
+  <mat-list role="list" class="pokemon-list__container">
+    <pokemon-card
+      *ngFor="let pokemon of pokemonList"
+      class="pokemon-list-item"
+      role="listitem"
+      [inCart]="false"
+      [pokemon]="pokemon"
+    ></pokemon-card>
+  </mat-list>
+</div>
+<ng-template #noDataView>
+  <p class="pokemon-list__title">No pokemons</p>
+</ng-template>

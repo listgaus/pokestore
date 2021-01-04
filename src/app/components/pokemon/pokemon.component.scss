@@ -1,0 +1,167 @@
+@import 'src/assets/styles/variables.scss';
+
+.pokemon-card-item {
+  display: flex;
+  flex-direction: column;
+  color: #034b5091;
+  padding: 0 1px;
+  margin: 1rem;
+  max-width: 80%;
+  height: 15vh;
+  width: 18vw;
+
+  font-weight: 800;
+
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 15px;
+  overflow: hidden;
+  &.removefromcart {
+    //-webkit-animation: fadeIn 3000ms;
+    //-moz-animation: fadeIn 3000ms;
+    //animation: fadeIn 3000ms;
+
+    -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+
+  }
+
+  &:hover
+  {
+    box-shadow:
+      1px 1px #53ea8a,
+      2px 2px #93f1c7;
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+}
+.pokemon-name-title{
+  margin-right: 1vw;
+}
+.pokemon-avatar {
+  &.sendtocart {
+    display: block;
+    animation: xAxis 1s forwards cubic-bezier(1.000, 0.440, 0.840, 0.165);
+
+    &:before {
+      animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    }
+  }
+  &.removefromcart {
+    -webkit-animation: fadeIn 3000ms;
+    -moz-animation: fadeIn 3000ms;
+    animation: fadeIn 3000ms;
+  }
+}
+.cart-action-btn {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  background: #034b5091;
+  color: white;
+  width: 24px;
+  height: 24px;
+
+  .action-btn-icon {
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: -12px;
+      -webkit-text-stroke: 1px;
+    &.remove{
+      padding-bottom: 3px
+    }
+  }
+}
+img{
+  width: 100%;
+}
+@keyframes xAxis {
+  100% {
+    transform: translateX(calc(50vw - 105px));
+  }
+}
+
+@keyframes yAxis {
+  100% {
+    transform: translateY(calc(-50vh + 75px));
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+    width: 50%;
+  }
+  to {
+    opacity: 0.5;
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    width: 50%;
+  }
+  to {
+    opacity: 0.5;
+    width: 20%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    width: 50%;
+  }
+  to {
+    opacity: 0.5;
+    width: 20%;
+  }
+}
+
+
+@media only screen and (max-width: $desktop) {
+  .cart-action-btn {
+    width: 20px;
+    height: 20px;
+    padding-right: 22px;
+    .action-btn-icon {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .cart-action-btn {
+    width: 18px;
+    height: 18px;
+    padding-right: 22px;
+    font-size: 10px;
+
+    .action-btn-icon {
+      font-size: 12px;
+      &.remove{
+        padding-bottom: 4px
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-large) {
+  .cart-action-btn {
+    height: 12px;
+
+    .action-btn-icon {
+      font-size: 8px;
+      &.remove{
+        padding-bottom: 5px
+      }
+    }
+
+  }
+}
+
+
