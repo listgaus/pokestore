@@ -1,0 +1,16 @@
+dist/
+www/
+loader/
+
+*.log
+*.lock
+*.tmp
+*.tmp.*
+
+.idea/
+.vscode/
+.sass-cache/
+node_modules/
+$RECYCLE.BIN/
+
+
