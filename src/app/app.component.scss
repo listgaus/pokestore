@@ -1,4 +1,11 @@
 @import 'src/assets/styles/variables.scss';
+:host::ng-deep {
+  mat-dialog-container.mat-dialog-container {
+    padding: 0;
+  }
+
+}
+
 
 :host ::ng-deep .mat-list-item-content {
   padding: 0 !important;
@@ -29,10 +36,6 @@
       left: 20px;
     }
   }
-
 }
 
-.app-surface {
-  padding: 1rem;
-}
 

@@ -12,8 +12,8 @@ export class DialogService {
 
   openConfirmDialog(msg) {
     return this.dialog.open(ConfirmDialogComponent, {
-      width: '390px',
-      height: '200px',
+      // width: '390px',
+      // height: '200px',
       panelClass: 'confirm-dialog-container',
       disableClose: true,
       position: {top: '20%'},
@@ -23,3 +23,4 @@ export class DialogService {
     });
   }
 }
+
